@@ -5,11 +5,12 @@
 }
 
 @model UserID
-
-    <h1 >Welcome to Cuppa Joe <span class="text-primary">@Model.firstname!</span></h1>
-<h1>We see that you like your coffee roasted <span class="text-info"> @Model.preference</span>  @if (Model.homeRoast == true) {<span class="text-secondary"> and you <span class="text-danger">home roast</span></span>}!</h1>
-
-
+<div class="backgroundIndex"></div>
+<div id="slide">
+    <h1 class="display-4">Welcome <span class="userTrait" style="color:#4B1F0E; font-weight:bold;">@Model.firstname!</span></h1>
+    <h1>We see that you like your coffee roasted <span class="userTrait" style="color:#4B1F0E; font-weight:bold;"> @Model.preference</span> <br /> @if (Model.homeRoast == true)
+    {<span> and you <span class="userTrait" style="font-weight: bold; color:#4B1F0E;">home roast</span></span>}!</h1>
+</div>
 
 
 

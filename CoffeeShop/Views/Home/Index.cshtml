@@ -1,14 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+    <div class="backgroundIndex">
+    </div>
+        <div class="text-center">
+            <i class="fas fa-mug-hot display-1" style="color:#0E0504;"></i>
+            <h1 class="display-3" style="font-family:Anton; color:#0E0504;">Welcome!</h1>
 
-<div class="text-center">
-    <i class="fas fa-coffee display-1"></i>
-    <h1 class="display-3" style="font-family:Anton;">Welcome to Cuppa Joe </h1>
-
-    <h4 class="text-secondary" style="font-family:Jura;">Would you like to register?</h4>
-    <a class="btn btn-info btn-lg display-1" style="font-family:Jura;" asp-controller="Home" asp-action="Register">Register Here</a>
-</div>
+            <h4 class="text-secondary" style="font-family:Jura; color:#794028">Would you like to register?</h4>
+            <a class="btn btn-lg display-1" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" asp-controller="Home" asp-action="Register">Register Here</a>
+        </div>
+  
 @*<h1 class="text-warning display-3">Login:</h1>*@
 @*<form asp-controller="Home" asp-action="LoginPage">
     <div class="form-group">

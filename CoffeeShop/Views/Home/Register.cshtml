@@ -3,8 +3,8 @@
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1 class="text-info" style="font-family:'Anton';">Register for Cuppa Joe!</h1>
+<div class="backgroundReg"></div>
+<h1 style="font-family:'Anton'; color:#0E0504;">Register for Cuppa Joe!</h1>
 <form asp-controller="Home" asp-action="AddUser"  oninput='confirmpassword.setCustomValidity(confirmpassword.value != password.value ? "Passwords do not match." : "")' >
     <div class="form-group">
         <label class="fontJura" for="FirstName">First Name:</label>
@@ -34,22 +34,22 @@
         </small>
     </div>
     <div class="form-group">
-        <h1 class="text-info " style="font-family:'Anton';">How do you like your coffee roasted?</h1>
+        <h1 style="font-family:'Anton'; color:#0E0504;">How do you like your coffee roasted?</h1>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="preference" id="inlineRadio1" value="Light" required>
-            <label class="form-check-label fontJura" for="inlineRadio1">Light</label>
+            <input class="form-check-input" type="radio" name="preference" id="Light" value="Light" required>
+            <label class="form-check-label fontJura" for="Light">Light</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="preference" id="inlineRadio2" value="Medium">
-            <label class="form-check-label fontJura" for="inlineRadio2">Medium</label>
+            <input class="form-check-input" type="radio" name="preference" id="Medium" value="Medium">
+            <label class="form-check-label fontJura" for="Medium">Medium</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="preference" id="inlineRadio3" value="Dark">
-            <label class="form-check-label fontJura" for="inlineRadio3">Dark </label>
+            <input class="form-check-input" type="radio" name="preference" id="Dark" value="Dark">
+            <label class="form-check-label fontJura" for="Dark">Dark </label>
         </div>
     </div>
     <div class="form-group">
-        <h1 class="text-info" style="font-family:'Anton';">Do you roast?</h1>
+        <h1 style="font-family:'Anton'; color:#0E0504;">Do you home roast?</h1>
     </div>
     <div class="form-group">
         <div class="form-check">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" class="btn btn-info" id="submitRegister"/>
+        <input type="submit" class="btn btn-lg" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" id="submitRegister"/>
     </div>
 
 </form>
