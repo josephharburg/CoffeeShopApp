@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model UserID
+
+    <h1 >Welcome to Cuppa Joe <span class="text-primary">@Model.firstname!</span></h1>
+<h1>We see that you like your coffee roasted <span class="text-info"> @Model.preference</span>  @if (Model.homeRoast == true) {<span class="text-secondary"> and you <span class="text-danger">home roast</span></span>}!</h1>
+
+
+
+
+
+
+
