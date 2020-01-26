@@ -3,8 +3,23 @@
     ViewData["Title"] = "LoginPage";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model UserID
-<h1>LoginPage</h1>
-<p>@Model.firstname  @Model.lastname</p>
-
+@model Users
+<div class="backgroundReg"></div>
+<h1 style="font-family:'Anton'; color:#0E0504;">Please Sign in</h1>
+<form asp-controller="Home" asp-action="ValidateUser">
+    <div class="form-group">
+        <label class="fontJura" for="Email">Email Address:</label>
+        <input type="email" class="form-control" name="Email" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+        <label class="fontJura" for="Password">Password:</label>
+        <input type="password" class="form-control" id="pw1" name="Password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+            Remember: Your password was 8-20 characters long, contained at least One Uppercase letter, One Lowercase Letter and One Number!
+        </small>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-lg" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" id="submitRegister" />
+    </div>
+</form>
 

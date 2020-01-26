@@ -3,13 +3,20 @@
 }
     <div class="backgroundIndex">
     </div>
-        <div class="text-center">
-            <i class="fas fa-mug-hot display-1" style="color:#0E0504;"></i>
-            <h1 class="display-3" style="font-family:Anton; color:#0E0504;">Welcome!</h1>
-
-            <h4 class="text-secondary" style="font-family:Jura; color:#794028">Would you like to register?</h4>
-            <a class="btn btn-lg display-1" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" asp-controller="Home" asp-action="Register">Register Here</a>
+    <div class="text-center">
+        <i class="fas fa-mug-hot display-1" style="color:#0E0504;"></i>
+        <h1 class="display-3" style="font-family:Anton; color:#0E0504;">Welcome!</h1>
+        <div class="flex-row text-center">
+            <div class="col">
+                <h4 class="text-secondary" style="font-family:Jura; color:#794028">New Here?</h4>
+                <a class="btn btn-lg display-1" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" asp-controller="Home" asp-action="Register">Register Here</a>
+            </div>
+            <div class="col">
+                <h4 class="text-secondary" style="font-family:Jura; color:#794028">Been Here Before?</h4>
+                <a class="btn btn-lg display-1" style="font-family:Jura; background-color:#4B1F0E; color:ghostwhite;" asp-controller="Home" asp-action="LoginPage">Login</a>
+            </div>
         </div>
+    </div>
   
 
 

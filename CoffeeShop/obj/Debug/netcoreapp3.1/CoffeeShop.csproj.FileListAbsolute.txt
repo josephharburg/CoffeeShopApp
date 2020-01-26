@@ -150,8 +150,11 @@ C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\ru\Mic
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddUser.cshtml.g.cs
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\LoginPage.cshtml.g.cs
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
