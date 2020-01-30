@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewData["Title"] = "InsufficientFunds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="display-3 text-warning">You Cannot Buy this item because you do not have enough funds!</h1>
+<h1 class="display-4">The Item costs $@ViewBag.Price and you only have $@ViewBag.Funds!</h1>
+

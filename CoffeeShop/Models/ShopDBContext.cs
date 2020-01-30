@@ -40,6 +40,8 @@ namespace CoffeeShop.Models
                     .IsRequired()
                     .HasMaxLength(250);
 
+                entity.Property(e => e.ItemType).HasMaxLength(30);
+
                 entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
             });
 
@@ -56,6 +58,10 @@ namespace CoffeeShop.Models
                     .IsRequired()
                     .HasColumnName("firstname")
                     .HasMaxLength(50);
+
+                entity.Property(e => e.Funds)
+                    .HasColumnName("funds")
+                    .HasColumnType("money");
 
                 entity.Property(e => e.HomeRoast).HasColumnName("homeRoast");
 

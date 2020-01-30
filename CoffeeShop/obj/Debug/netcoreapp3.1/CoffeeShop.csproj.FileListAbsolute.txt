@@ -158,3 +158,4 @@ C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\System
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\josep\source\repos\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\InsufficientFunds.cshtml.g.cs

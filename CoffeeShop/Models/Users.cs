@@ -12,5 +12,6 @@ namespace CoffeeShop.Models
         public string Password { get; set; }
         public string Preference { get; set; }
         public bool? HomeRoast { get; set; }
+        public decimal? Funds { get; set; }
     }
 }
