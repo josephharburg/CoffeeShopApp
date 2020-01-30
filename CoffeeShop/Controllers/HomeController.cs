@@ -45,8 +45,8 @@ namespace CoffeeShop.Controllers
             var validatePw = db.Users.Where(b => b.Email == user.Email && b.Password == user.Password).FirstOrDefault();
             if (validateEmail != null && validatePw != null)
             {
-                TempData["current"] = validatePw.Id;
-                TempData.Save();
+                HttpContext.Session.SetInt32("current", validatePw.Id);
+                
                 return RedirectToAction("Shop");
             }
             else if(validateEmail == null)
@@ -68,10 +68,10 @@ namespace CoffeeShop.Controllers
         {
             
             ShopDBContext db = new ShopDBContext();
-            if(TempData["current"] != null)
-            {
-                TempData["new"] = TempData["current"];
-            }
+            //if(TempData["current"] != null)
+            //{
+            //    TempData["new"] = TempData["current"];
+            //}
             
             return View("Shop", db);
            
@@ -81,14 +81,14 @@ namespace CoffeeShop.Controllers
             ShopDBContext db = new ShopDBContext();
             Users founduser = new Users();
             Items foundItem = new Items();
-            if (TempData["new"] != null)
-            {
-                TempData["there"] = TempData["new"];
-            }
-            int trythis = (int)TempData["there"];
+            //if (TempData["new"] != null)
+            //{
+            //    TempData["there"] = TempData["new"];
+            //}
+            //int trythis = (int)TempData["there"];
             foreach (Users u in db.Users)
             {
-                if (u.Id == trythis)
+                if (u.Id == HttpContext.Session.GetInt32("current"))
                 {
                     founduser = u;
                 }

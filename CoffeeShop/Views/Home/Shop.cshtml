@@ -16,7 +16,7 @@
                 <h3 class="card-text fontJura" name="Description">@item.Description.</h3>
                 <h3 class="card-text fontJura" name="Quantity">Invetory: @item.Quantity.</h3>
                 <h3 class="card-text fontJura" name="Price">$@item.Price.</h3>
-                @if (TempData["current"] != null)
+                @if (Context.Session.Keys.Contains("current"))
                 {
             <form asp-controller="Home" asp-action="PurchaseItem">
                 <button type="submit" class="btn-lg text-light" style="background-color:#4B1F0E;" name="ProductName" value="@item.ProductName">Buy!</button>
