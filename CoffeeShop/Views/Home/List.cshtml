@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<PurchasedItems>
+
+    <div class="container text-center">
+
+        <h1 class="display-1 fontAnton"><i class="fas fa-user"></i></h1>
+        <h1 class="display-1 fontAnton">Welcome to your Account!</h1>
+    </div>
+    
+        @if (Model.Count == 0)
+    {<div class="container text-center justify-content-center">
+    <h1 class="display-3 fontJura">You Have Not Purchased Anything From Us Yet!</h1>
+    <a class="display-3 text-warning" asp-controller="Home" asp-action="Shop">Return to Shop</a>
+</div>
+    }
+    else
+    {<div class="container text-center">
+        <h1 class="display-3 fontJura">Here is what you have purchased from us:</h1>
+    </div>
+    <div class="card-columns">
+
+        @foreach (PurchasedItems i in Model)
+        {
+            <div class="card" style="border:3px solid #4B1F0E;">
+                <div class="card-body text-center">
+                    <img class="card-img" src="~/imgs/@i.ItemType .jpg" />
+                    <h2 class="card-title fontAnton" name="ProductName">@i.ProductName</h2>
+                    <h3 class="card-text fontJura" name="Quantity">Total to Date: @i.Quantity.</h3>
+                    <form asp-controller="Home" asp-action="Details">
+                        <button type="submit" class="btn-lg buttons" name="ProductName" value="@i.ProductName">Product Description</button>
+
+                    </form>
+                    <form asp-controller="Home" asp-action="ReturnPage">
+                        <button type="submit" class="btn-lg buttons" name="Id" value="@i.Id">Return Item</button>
+                    </form>
+
+                </div>
+            </div>
+        }
+
+    </div>
+    }
+

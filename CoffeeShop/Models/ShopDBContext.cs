@@ -16,6 +16,8 @@ namespace CoffeeShop.Models
         }
 
         public virtual DbSet<Items> Items { get; set; }
+        public virtual DbSet<PurchasedItems> PurchasedItems { get; set; }
+        public virtual DbSet<UserItems> UserItems { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -43,6 +45,43 @@ namespace CoffeeShop.Models
                 entity.Property(e => e.ItemType).HasMaxLength(30);
 
                 entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
+            });
+
+            modelBuilder.Entity<PurchasedItems>(entity =>
+            {
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Description).HasMaxLength(250);
+
+                entity.Property(e => e.ItemType).HasMaxLength(30);
+
+                entity.Property(e => e.ProductName).HasMaxLength(100);
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+            });
+
+            modelBuilder.Entity<UserItems>(entity =>
+            {
+                entity.HasKey(e => e.UserItemId)
+                    .HasName("PK__UserItem__B44C03C3F84E19F0");
+
+                entity.Property(e => e.UserItemId).HasColumnName("UserItemID");
+
+                entity.Property(e => e.ItemId)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.HasOne(d => d.Item)
+                    .WithMany(p => p.UserItems)
+                    .HasForeignKey(d => d.ItemId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__UserItems__ItemI__4AB81AF0");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.UserItems)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__UserItems__UserI__49C3F6B7");
             });
 
             modelBuilder.Entity<Users>(entity =>

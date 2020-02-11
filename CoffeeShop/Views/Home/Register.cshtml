@@ -3,6 +3,7 @@
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model Users
 <div class="backgroundReg"></div>
 <h1 style="font-family:'Anton'; color:#0E0504;">Register for Cuppa Joe!</h1>
 <form asp-controller="Home" asp-action="AddUser"  oninput='confirmpassword.setCustomValidity(confirmpassword.value != Password.value ? "Passwords do not match." : "")' >
@@ -18,19 +19,21 @@
     <div class="form-group">
         <label class="fontJura" for="Email">Email Address:</label>
         <input type="email" class="form-control" name="Email" placeholder="Enter email" required>
+        
     </div>
     <div class="form-group">
-        <label class="fontJura" for="Password">Password:</label>
-        <input type="password" class="form-control" id="pw1" name="Password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
-        <small id="passwordHelpBlock" class="form-text text-muted">
-            Your password must be 8-20 characters long, contain at least One Uppercase letter, One Lowercase Letter and One Number.
+        <label class="fontJura" asp-for="Password">Password:</label>
+        <input type="password" class="form-control" id="pw1" asp-for="Password" name="Password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+        <small id="passwordHelpBlock" class="form-text text-danger">
+            <span asp-validation-for="Password"></span>
         </small>
+        
     </div>
     <div class="form-group">
-        <label class="fontJura" for="Password">Confirm Password:</label>
-        <input type="password" class="form-control" id="pw2" name="confirmpassword" placeholder="Confirm Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+        <label class="fontJura" for="confirmpassword">Confirm Password:</label>
+        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
         <small id="passwordHelpBlock" class="form-text text-muted">
-            Password must match first password.
+            @*<span asp-validation-for="Password"></span>*@
         </small>
     </div>
     <div class="form-group">

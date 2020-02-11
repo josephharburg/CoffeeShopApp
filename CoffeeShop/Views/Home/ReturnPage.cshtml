@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "ReturnPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model PurchasedItems
+
+    <div class="container text-center">
+        <h1 class="display-4 fontAnton">Are you sure you want to return this item?</h1>
+        <form asp-controller="Home" asp-action="DeleteItem">
+            <button class="btn-lg buttons" type="submit" name="Id" value="@Model.Id">Yes</button>
+        </form>
+        <form asp-controller="Home" asp-action="List">
+            <button class="btn-lg buttons" type="submit">No</button>
+        </form>
+
+    </div>

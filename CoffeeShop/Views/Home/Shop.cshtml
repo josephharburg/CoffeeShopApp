@@ -5,22 +5,31 @@
 }
 @model ShopDBContext
 
-<h1 class="display-3">Welcome to the Shop!</h1>
+<h1 class="display-3 text-center fontAnton">Welcome to the Shop!</h1>
+@if (Context.Session.Keys.Contains("current"))
+{
+    <div class="container-fluid text-center" style="padding-bottom: 5vh;">
+        <a class="display-4 fontAnton text-warning text-center" asp-controller="home" asp-action="List">Your account</a>
+    </div>
+}
 <div class="card-columns">
+
     @foreach (Items item in Model.Items)
     {
         <div class="card" style="border:3px solid #4B1F0E;">
             <div class="card-body text-center">
                 <img class="card-img" src="~/imgs/@item.ItemType .jpg" />
                 <h2 class="card-title fontAnton" name="ProductName">@item.ProductName</h2>
-                <h3 class="card-text fontJura" name="Description">@item.Description.</h3>
                 <h3 class="card-text fontJura" name="Quantity">Invetory: @item.Quantity.</h3>
                 <h3 class="card-text fontJura" name="Price">$@item.Price.</h3>
+                <form asp-controller="Home" asp-action="Details">
+                    <button type="submit" class="btn-lg fontJura text-light" style="background-color:#4B1F0E;" name="ProductName" value="@item.ProductName">Product Description</button>
+                </form>
                 @if (Context.Session.Keys.Contains("current"))
                 {
-            <form asp-controller="Home" asp-action="PurchaseItem">
-                <button type="submit" class="btn-lg text-light" style="background-color:#4B1F0E;" name="ProductName" value="@item.ProductName">Buy!</button>
-            </form>
+                    <form asp-controller="Home" asp-action="PurchaseItem">
+                        <button type="submit" class="btn-lg text-light" style="background-color:#4B1F0E;" name="ProductName" value="@item.ProductName">Buy!</button>
+                    </form>
                 }
 
             </div>

@@ -121,4 +121,12 @@ h1 span{
 h1 span.userTrait:hover {
     transform: scale(1.2);
 }
-
+.buttons {
+    background-color:#4B1F0E;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    color:whitesmoke;
+}
+.detailimage{
+    height: 500px;
+}
